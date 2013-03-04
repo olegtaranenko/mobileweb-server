@@ -1,0 +1,26 @@
+{
+  "count": 56,
+  "threads": [{
+    "id": 123,
+    "author": "Thorin",
+    "subject": "Tracking Romanov's lab",
+    "participants": ["Jamund Ferguson", "Mamta Jain"],
+    "preview": "how are..",
+    "starred": false,
+    "read": false,
+    "type": "Message",
+    "date": 1360926818382,
+    "updated": 1360926818382
+  }, {
+    "id": 124,
+    "author": "Rick Arby",
+    "subject": "Project status",
+    "participants": ["Rick Arby"],
+    "preview": "New defect..",
+    "starred": false,
+    "read": true,
+    "type": "Message",
+    "date": 1358001968674,
+    "updated": 1358531968649
+  }]
+}
