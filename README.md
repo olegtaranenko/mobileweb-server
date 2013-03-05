@@ -7,3 +7,5 @@ Initail [MobileWeb project](https://github.com/odeskbootcamp/mobileweb) is divid
 It is need to get packaging process for Phonegap iOS & Android more robust & convenient.
 
 changed at server side
+
+added in client 
