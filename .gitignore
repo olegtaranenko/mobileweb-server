@@ -1,0 +1,8 @@
+app.built.js
+node_modules
+public/css/style.css
+.idea
+npm-debug.log
+*.save
+.#*
+.DS_Store

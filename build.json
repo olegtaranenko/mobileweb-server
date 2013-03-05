@@ -1,0 +1,14 @@
+{
+  "source": "client",
+  "anvil.rjs": {
+    "run": true,
+    "baseUrl": "client/js",
+    "mainConfigFile": "client/js/main.js",
+    "modules": [
+      {
+        "name": "main",
+        "exclude": ["jquery"]
+      }
+    ]
+  }
+}
