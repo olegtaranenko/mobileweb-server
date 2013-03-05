@@ -1,0 +1,18 @@
+{
+  "id": 124,
+  "subject":"Project status",
+  "count": "1",
+  "read": true,
+  "Messages": [{
+    "sender": {
+      "name": "Rick Arby",
+      "iconurl": "css/images/avatar1.png"
+    },
+    "read": false,
+    "body": "Hey Tony, Natalia found the decoy bug as planned. Ihope your not using this to steal anything personal again... I know it was you last time and she was pissed at me for it. Hey Tony",
+    "created" : 1358531968674,
+    "attachment": [{
+      "url": "url3"
+    }]
+  }]
+}

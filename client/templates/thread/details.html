@@ -1,0 +1,25 @@
+<div data-enchance="false" id="nav" style="display: block;">
+  <div class="inner">
+    <a href="#list/back" class="back">Back</a>
+    <h2><%= thread.get('subject') %></h2>
+  </div>
+</div>
+
+<ul data-role="listview">
+  <%
+  var messagesCollection = thread.get('Messages'),
+    id = thread.get('id'),
+    view = this;
+
+  messagesCollection.each (function (message, index) {
+    print(view.renderRow(message, index));
+  });
+  %>
+</ul>
+<div id="replyQuestion">
+  <a href="#reply/<%= id %>" class="bui-reply" data-theme="g">Reply?</a>
+</div>
+<div id="replyForm" style="display: none">
+  <textarea placeholder="Reply?" data-corners="none"></textarea>
+  <input type="submit" value="Send message" data-icon="loading" data-theme="q"/>
+</div>

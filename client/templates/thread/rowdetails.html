@@ -1,0 +1,12 @@
+<%
+var sender = message.get('sender');
+var nth = index % 2;
+%>
+<li class="li-list-nth-<%= nth %> bui-message" xmlns="http://www.w3.org/1999/html">
+  <div class="bui-message-header">
+    <img class="bui-user-thumb" src="<%= sender.iconurl %>" width="40px" height="40px"/>
+    <p class="bui-sender-name"><%= sender.name %></p>
+    <p class="bui-sender-time"><%= message.get('relative') %></p>
+  </div>
+  <span><%= message.get('body') %></span>
+</li>
