@@ -23,7 +23,7 @@ define([
 
 
       threadlist: function (opt) {
-        $.mobile.showPageLoadingMsg();
+//        $.mobile.showPageLoadingMsg();
         var lastVisited = $.cookies.get('lastvisited'),
           initialLoad = lastVisited == null;
 
@@ -63,7 +63,7 @@ define([
             });
             webView.changePage(page, back);
 
-            $.mobile.hidePageLoadingMsg();
+//            $.mobile.hidePageLoadingMsg();
           },
           error: function() {
             console.error('error loading threads!');
@@ -77,7 +77,7 @@ define([
        * @param id {int} thread id
        */
       details: function (id) {
-        $.mobile.showPageLoadingMsg();
+//        $.mobile.showPageLoadingMsg();
 
         var webView = this;
 
@@ -95,7 +95,7 @@ define([
             model.set({read: true});
             webView.changePage(page);
 
-            $.mobile.hidePageLoadingMsg();
+//            $.mobile.hidePageLoadingMsg();
           },
           error: function() {
             console.error('error loading model ', id);
@@ -121,7 +121,7 @@ define([
 
         $('body').append(element);
 
-        var transition = $.mobile.defaultPageTransition;
+//        var transition = $.mobile.defaultPageTransition;
 
         // We don't want to fade the first page. Slide, and risk the annoying "jump to top".
         if (this.firstPage) {
@@ -129,11 +129,13 @@ define([
           this.firstPage = false;
         }
 
+/*
         $.mobile.changePage(element, {
           changeHash:false,
           transition: transition,
           reverse: back
         });
+*/
       }
     });
   }

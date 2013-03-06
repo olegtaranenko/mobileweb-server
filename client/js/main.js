@@ -8,9 +8,10 @@ require.config({
     config: 'config',
     backbone: 'lib/backbone',
     jquery: 'lib/jquery',
+    jqmobi: 'lib/jq.mobi',
+    jqui: 'lib/jq.ui',
     jaauldeCookies: 'lib/jaaulde.cookies',
     jqueryCookiesPlugin: 'lib/plugins/jquery.cookies',
-    mobile: 'lib/jquery.mobile',
     underscore: 'lib/underscore',
     underscoreDate: 'lib/plugins/underscore.date',
     text: 'lib/plugins/text',
@@ -37,6 +38,14 @@ requirejs.config({
       deps: ['underscore'],
       exports: '$'
     },
+    'jqmobi': {
+      deps: ['config', 'jquery'],
+      exports: 'jqmobi'
+    },
+    'jqui': {
+      deps: ['jqmobi'],
+      exports: 'jqui'
+    },
     "jaauldeCookies": {
       deps: ['jquery']
     },
@@ -46,10 +55,6 @@ requirejs.config({
     "config": {
       deps: ['jquery'],
       exports: 'config'
-    },
-    'mobile': {
-      deps: ['config', 'jquery'],
-      exports: 'mobile'
     },
     underscoreDate: {
       deps: ['underscore']
@@ -100,7 +105,7 @@ require([
   'router',
   'jqueryCookiesPlugin',
   'underscore', 'underscoreDate',
-  'mobile',
+  'jqmobi',
   'text', 'jquery', 'config',
   'ThreadList',
   'ThreadDetails'

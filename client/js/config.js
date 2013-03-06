@@ -7,12 +7,12 @@
 // Use Bootcamp namespace as a jQuery plugin to get access from anywhere
 (function($){
 
-  var mobile = (/iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase())),
-    tapEvent = mobile ? 'touchstart' : 'vclick';
+  var onMobile = (/iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase())),
+    tapEvent = onMobile ? 'touchstart' : 'vclick';
 
   var config = {
 
-    mobile   : mobile,
+    mobile   : onMobile,
 
     tapEvent : tapEvent,
 
@@ -44,19 +44,3 @@
   });
 
 }(jQuery));
-
-
-$(document).bind("mobileinit", function () {
-  $.mobile.ajaxEnabled = false;
-  $.mobile.linkBindingEnabled = false;
-  $.mobile.hashListeningEnabled = false;
-  $.mobile.pushStateEnabled = false;
-  $.mobile.defaultPageTransition = "slide";
-  $.mobile.loader.prototype.options.theme = "b";
-
-
-  // Remove page from DOM when it's being replaced.
-  $(document).on("pagehide", "div[data-role='page']", function (event, ui) {
-    $(event.currentTarget).remove();
-  });
-});
