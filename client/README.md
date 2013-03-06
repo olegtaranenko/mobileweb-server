@@ -11,3 +11,5 @@ changed at server side
 added in client
 
 added after git subtree merge
+
+try to change to jqmobi branch via server subtree
