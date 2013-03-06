@@ -8,5 +8,6 @@ It is need to get packaging process for Phonegap iOS & Android more robust & con
 
 changed at server side
 
-added in client 
+added in client
 
+added after git subtree merge
