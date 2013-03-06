@@ -40,5 +40,6 @@ To get CSS tuning the LESS is selected. Sources are located at `client/less/css`
 
     WARNING! This is very convinient for development but for production use it has to be fixed.
 
+test git subtree after clone server superproject
 
 
