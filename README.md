@@ -114,9 +114,16 @@ Note that folder client is already exists in the *server* repo, but it implicitl
 To make link explicit
 
     git remote add client git@github.com:olegtaranenko/mobileweb-client.git
-    git subtree merge -P client client master
+    git fetch client
+    git subtree pull -P client -m "make link to client repo" client master
+        From github.com:olegtaranenko/mobileweb-client
+         * branch            master     -> FETCH_HEAD
+        Merge made by the 'recursive' strategy.
 
-Now we can start working on the $mobileweb-server/client files and then commit changes to *mobileweb-client*
+Now both repos are properly linked and we can start working on the **mobileweb-client** project in **mobileweb-server/client** directory.
+
+###Note: be careful! Below snippets might add/edit/delete files on working repo, which is not what you now want :D
+###Just believe to our words you are not sure what are you doing!
 
     touch client/newClass.js
     git add .
@@ -126,7 +133,7 @@ Now we can start working on the $mobileweb-server/client files and then commit c
 
 Both repos have newClass.js added!
 
-Imagine for some reason you have to change at the *client* repo first
+Imagine for some reason you have to change at the *client* repo first...
 
     cd ../mobileweb-client
     touch css/newCss.css
@@ -151,5 +158,5 @@ Moreover later by packaging *app* with Phonegap it will be a mainstream using.
 
 # Feedback required!
 
-Please send your feedback on any issues or misunderstanding to get this readme more polish for other team mates.
+Please send your feedback on any issues or misunderstanding to get this readme more polish. Thinking about other team mates!
 
