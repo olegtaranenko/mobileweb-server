@@ -128,10 +128,12 @@ Now both repos are properly linked and we can start working on the **mobileweb-c
     touch client/newClass.js
     git add .
     git commit -m "add new class to client"
-    git push
     git subtree push -P client client master
 
 Both repos have newClass.js added!
+
+    cd ../mobileweb-client/
+    git pull
 
 Imagine for some reason you have to change at the *client* repo first...
 
@@ -143,7 +145,7 @@ Imagine for some reason you have to change at the *client* repo first...
     cd ../mobileweb-server
     git subtree pull -P client client master
 
-*server* repo got newCss.css file as well!
+*server* repo got newCss.css file in folder as well!
 
 
 ## Working with branches
