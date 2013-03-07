@@ -1,22 +1,19 @@
-<div data-enchance="false" id="nav" style="display: block;">
+<div id="nav" style="display: block;">
   <div class="inner">
     <a href="#" class="add"></a>
     <h2>Inbox</h2>
-    <a href="#" class="menu"><span><% if (newMessages > 0 ) print(newMessages) %></span></a>
+    <a href="#" class="menu"><% if (newMessages > 0 ) print('<span>' + newMessages + '</span>') %></a>
   </div>
 </div>
-
-<ul data-role="listview">
+<div style="clear:none"></div>
+<ul style="padding-top: 62px">
 <%
   _.each (threads, function (model, index) {
 %>
   <li <%if (!model.get('read')) print ('class="bui-unread"') %> data-icon="false">
-    <a href="#details/<%= model.get('id') %>">
-      <h3 class="bui-thread-author"><%=model.get('author')%></h3>
-      <p class="bui-thread-subject"><%= model.get('subject') %></p>
-      <p><%= model.get('preview') %></p>
-      <p class="ui-li-aside bui-sender-time"><%= model.get('relative') %></p>
-    </a>
+      <a href="#details/<%= model.get('id') %>">
+          <p style="font-size: 18px"><%=model.get('author')%></p>
+      </a>
   </li>
 <%
   });

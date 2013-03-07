@@ -34,6 +34,26 @@
   /* btn-attrs */
 
 }
+body {
+  background: #fff;
+  color: #2f3e46;
+}
+ul > li,
+ul > li > a,
+p {
+  background: inherit;
+  color: inherit;
+  box-shadow: inherit;
+  -webkit-box-shadow: inherit;
+}
+ul > li > a {
+  padding-left: inherit;
+}
+ul > li > a:after {
+  content: "";
+  position: inherit;
+  right: inherit;
+}
 #replyQuestion {
   margin-left: 20px;
   margin-top: 15px;
@@ -74,7 +94,7 @@
 }
 .bui-message-header .bui-sender-time.ui-li-desc {
   margin-top: 5px;
-  color: #b8b8b8;
+  color: #2f3e46;
   font-style: italic;
   font-size: 12px;
 }
